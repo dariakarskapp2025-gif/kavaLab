@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Головна — КаваLab</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,700&family=Plus+Jakarta+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
+
+<!-- Swiper.js (карусель відгуків) -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
+
+<!-- Fancybox v5 (відкриття фото на весь екран) -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css">
+<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js" defer></script>
+
+<!-- Typed.js (ефект живого друку) -->
+<script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js" defer></script>
+
+<script>
+try {
+  document.documentElement.setAttribute(
+    'data-theme',
+    JSON.parse(localStorage.getItem('kl_theme') || '"dark"')
+  );
+} catch(e) {}
+</script>
+
+<style>
+  .typed-line {
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: #7fb09b;
+    min-height: 1.6em;
+    margin: 10px 0 16px;
+  }
+  .photo[data-fancybox] {
+    cursor: zoom-in;
+  }
+  .reviews-sec {
+    padding: 72px 0;
+  }
+  .reviews-swiper {
+    padding: 16px 8px 48px;
+    overflow: hidden;
+  }
+  .review-card {
+    padding: 28px;
+    border-radius: 20px;
+    background: var(--card, rgba(255, 255, 255, 0.04));
+    border: 1px solid var(--line, rgba(255, 255, 255, 0.1));
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 18px;
+    height: auto;
+    box-sizing: border-box;
+  }
+  .review-card p {
+    margin: 0;
+    font-size: 1rem;
+    line-height: 1.6;
+    font-style: italic;
+  }
+  .review-author {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+  }
+  .review-author strong {
+    display: block;
+    font-size: 0.98rem;
+  }
+  .review-author small {
+    opacity: 0.75;
+    font-size: 0.85rem;
+  }
+  .reviews-swiper .swiper-button-prev,
+  .reviews-swiper .swiper-button-next {
+    color: var(--text, #f3e9d7);
+    transform: scale(0.75);
+  }
+  .reviews-swiper .swiper-pagination-bullet-active {
+    background: #1e4d3b;
+  }
+</style>
+</head>
+<body>
+
+<header class="header">
+  <div class="wrap">
+    <div class="left">
+      <a href="index.html" class="logo">
+        <img src="images/logo.svg" alt="КаваLab" class="logo-mark">
+        <span>
+          <b>КаваLab</b>
+          <small>Specialty Roasters</small>
+        </span>
+      </a>
+
+      <nav>
+        <a href="index.html" class="active">Головна</a>
+        <a href="menu.html">Меню</a>
+        <a href="constructor.html">Конструктор напою</a>
+        <a href="recipes.html">Рецепти</a>
+        <a href="about.html">Про нас і контакти</a>
+      </nav>
+    </div>
+
+    <div class="right">
+      <button class="theme" id="theme" type="button">
+        <i></i>Тема: Espresso Shot 🌙
+      </button>
+      <button class="icon-btn" id="theme-m" type="button" aria-label="Тема">🌙</button>
+      <button class="icon-btn" id="burger" type="button" aria-label="Меню">☰</button>
+    </div>
+  </div>
+</header>
+
+<aside class="drawer" id="drawer">
+  <div class="top">
+    <a href="index.html" class="logo">
+      <img src="images/logo.svg" alt="КаваLab" class="logo-mark">
+      <span>
+        <b>КаваLab</b>
+        <small>Specialty Roasters</small>
+      </span>
+    </a>
+    <button class="icon-btn" id="close" type="button" aria-label="Закрити">✕</button>
+  </div>
+  <a href="index.html" class="active">Головна</a>
+  <a href="menu.html">Меню</a>
+  <a href="constructor.html">Конструктор напою</a>
+  <a href="recipes.html">Рецепти</a>
+  <a href="about.html">Про нас і контакти</a>
+
+  <small>
+    <b style="display:block;color:var(--text)">Лабораторія кави</b>
+    Київ, вул. Рейтарська, 15б
+  </small>
+</aside>
+
+<nav class="tabbar">
+  <a href="index.html" class="active"><span>🏠</span>Головна</a>
+  <a href="menu.html"><span>☕</span>Меню</a>
+  <a href="constructor.html"><span>⚗</span>Конструктор</a>
+  <a href="recipes.html"><span>📖</span>Рецепти</a>
+  <a href="about.html"><span>ℹ</span>Про нас</a>
+</nav>
+
+<main>
+
+  <!-- ГОЛОВНИЙ БЛОК -->
+  <section class="hero">
+    <div class="glow a"></div>
+    <div class="glow b"></div>
+
+    <div class="wrap hero-grid">
+      <div>
+        <div class="badge eyebrow">
+          ✦ Спешелті обсмажування 100% арабіка • свіжий урожай
+        </div>
+
+        <h1>
+          КаваLab — лабораторія твого
+          <em>затишного настрою</em>
+        </h1>
+
+        <p class="typed-line">
+          <span id="typed-slogan"></span>
+        </p>
+
+        <p class="lead">
+          Крафтова спешелті-кав'ярня, де кожна чашка — це баланс
+          наукової точності екстракції та безмежного домашнього тепла.
+        </p>
+
+        <div class="cta">
+          <a href="constructor.html" class="btn btn-primary">
+            Створити свій напій
+          </a>
+          <a href="menu.html" class="btn btn-ghost">
+            Відкрити меню
+          </a>
+        </div>
+
+        <div class="metrics">
+          <div class="metric">
+            <b>92+</b>
+            <span>Q-Grader оцінка</span>
+          </div>
+          <div class="metric">
+            <b>12</b>
+            <span>Моносортів зерен</span>
+          </div>
+          <div class="metric">
+            <b>2 хв</b>
+            <span>Приготування напою</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="showcase">
+        <div class="photo hero-img" data-fancybox="kavalab-gallery" data-src="images/hero.jpg" data-caption="Ефіопія Їргачеффе • Натуральна обробка"></div>
+
+        <div class="ribbon">
+          <div>
+            <span class="ic">☕</span>
+            <span>
+              <h4>Ефіопія Їргачеффе</h4>
+              <small>Натуральна обробка • Свіжа партія</small>
+            </span>
+          </div>
+          <span class="q">Q 92.5</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- СЕЗОННІ НАПОЇ -->
+  <section class="seasonal">
+    <div class="wrap">
+      <div class="sec-head">
+        <div>
+          <div class="eyebrow">Рекомендації баристи</div>
+          <h2>Сезонні шедеври місяця</h2>
+          <p class="muted">
+            Авторські рецепти, що змінюють уявлення про класичну подачу спешелті
+          </p>
+        </div>
+        <a href="menu.html" class="more">Переглянути повну карту →</a>
+      </div>
+
+      <div class="cards">
+
+        <article class="card">
+          <div class="top">
+            <div class="photo c1" data-fancybox="kavalab-gallery" data-src="images/c1.jpg" data-caption="Еспресо-тонік з сушеним червоним апельсином — 125 ₴"></div>
+            <span class="tag">Ice Craft</span>
+            <span class="price">125 ₴</span>
+          </div>
+
+          <div class="body">
+            <div>
+              <h3>Еспресо-тонік з сушеним червоним апельсином</h3>
+              <p>
+                Концентрований шот подвійного еспресо з мікролоту
+                Колумбія, преміальний тонік та дегідратований цитрус.
+              </p>
+            </div>
+
+            <div>
+              <div class="desc">Дескриптори:</div>
+              <div class="chips">
+                <span>Соковитий цитрус</span>
+                <span>Бергамот</span>
+                <span>Розмарин</span>
+              </div>
+            </div>
+
+            <a class="btn" href="recipes.html#r1">📖 Дивитися рецепт</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="top">
+            <div class="photo c2" data-fancybox="kavalab-gallery" data-src="images/c2.jpg" data-caption="Оксамитовий капучино на фундуковому молоці — 105 ₴"></div>
+            <span class="tag brown">Бестселер</span>
+            <span class="price">105 ₴</span>
+          </div>
+
+          <div class="body">
+            <div>
+              <h3>Оксамитовий капучино на фундуковому молоці</h3>
+              <p>
+                Шовковиста пінка на домашньому смаженому фундуковому
+                молоці з базою на митій Гватемалі середнього обсмаження.
+              </p>
+            </div>
+
+            <div>
+              <div class="desc">Дескриптори:</div>
+              <div class="chips">
+                <span>Молочний шоколад</span>
+                <span>Горіхове праліне</span>
+                <span>Карамель</span>
+              </div>
+            </div>
+
+            <a class="btn" href="recipes.html#r2">📖 Дивитися рецепт</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="top">
+            <div class="photo c3" data-fancybox="kavalab-gallery" data-src="images/c3.jpg" data-caption="Церемоніальна матча з лавандовим екстрактом — 130 ₴"></div>
+            <span class="tag">Ceremonial</span>
+            <span class="price">130 ₴</span>
+          </div>
+
+          <div class="body">
+            <div>
+              <h3>Церемоніальна матча з лавандовим екстрактом</h3>
+              <p>
+                Автентична японська матча сорту Уджі з додаванням
+                натурального холодного настою кримської лаванди.
+              </p>
+            </div>
+
+            <div>
+              <div class="desc">Дескриптори:</div>
+              <div class="chips">
+                <span>Ніжні вершки</span>
+                <span>Польова лаванда</span>
+                <span>Умамі</span>
+              </div>
+            </div>
+
+            <a class="btn" href="recipes.html#r3">📖 Дивитися рецепт</a>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ФІЛОСОФІЯ -->
+  <section class="philosophy">
+    <div class="wrap">
+      <div class="center">
+        <div class="eyebrow">Науковий підхід до смаку</div>
+        <h2>Філософія обсмажування та лабораторія смаку</h2>
+        <p class="muted">
+          Ми поєднуємо фізику, хімію екстракції та гастрономічну
+          пристрасть, щоб кожне зерно розкрило свій оригінальний теруар.
+        </p>
+      </div>
+
+      <div class="pillars">
+        <div class="pillar">
+          <div class="ic">◈</div>
+          <h3>Direct Trade</h3>
+          <p>
+            Прямі контракти з фермерами Колумбії, Ефіопії, Кенії та
+            Гватемали. Ми платимо справедливу ціну за найвищу якість
+            та унікальні мікролоти.
+          </p>
+          <div class="foot">Прозорість походження 100% ✓</div>
+        </div>
+
+        <div class="pillar">
+          <div class="ic">♨</div>
+          <h3>Профільне обсмажування Giesen</h3>
+          <p>
+            Кастомні профілі для кожного зерна на ростері Giesen W6A.
+            Ми керуємо конвекцією й теплопровідністю з точністю
+            до десятих часток градуса.
+          </p>
+          <div class="foot">Контроль RoR &amp; DTR кривих ↗</div>
+        </div>
+
+        <div class="pillar">
+          <div class="ic">💧</div>
+          <h3>Ремінералізація води 75 ppm</h3>
+          <p>
+            Вода формує 98% чашки фільтр-кави. Ми очищуємо її через
+            багаторівневий осмос та збагачуємо іонами магнію й кальцію
+            за стандартами SCA.
+          </p>
+          <div class="foot">Стандарти SCA Lab ⚗</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ВІДГУКИ ГОСТЕЙ (Swiper.js) -->
+  <section class="reviews-sec">
+    <div class="wrap">
+      <div class="sec-head">
+        <div>
+          <div class="eyebrow">Враження спільноти</div>
+          <h2>Що кажуть гості КаваLab</h2>
+          <p class="muted">
+            Реальні відгуки поціновувачів спешелті-кави та авторських рецептів
+          </p>
+        </div>
+      </div>
+
+      <div class="swiper reviews-swiper">
+        <div class="swiper-wrapper">
+
+          <div class="swiper-slide review-card">
+            <p>«Найкращий фільтр на Ефіопії Їргачеффе у місті. Відчувається, що хлопці справді заморочуються з водою та профілем обсмаження.»</p>
+            <div class="review-author">
+              <div>
+                <strong>Дар'я Ковальчук</strong>
+                <small>Поціновувачка альтернативи</small>
+              </div>
+              <span>★★★★★</span>
+            </div>
+          </div>
+
+          <div class="swiper-slide review-card">
+            <p>«Конструктор напою — просто знахідка! Зібрала собі лавандовий раф на вівсяному молоці без зайвого цукру, бариста приготував за 2 хвилини.»</p>
+            <div class="review-author">
+              <div>
+                <strong>Олена Мельник</strong>
+                <small>Постійна гостя</small>
+              </div>
+              <span>★★★★★</span>
+            </div>
+          </div>
+
+          <div class="swiper-slide review-card">
+            <p>«Дуже затишна атмосфера на Рейтарській і нереально смачний капучино на домашньому фундуковому молоці. Обов'язково повернуся на каппінг.»</p>
+            <div class="review-author">
+              <div>
+                <strong>Максим Савченко</strong>
+                <small>Гість кав'ярні</small>
+              </div>
+              <span>★★★★★</span>
+            </div>
+          </div>
+
+          <div class="swiper-slide review-card">
+            <p>«Еспресо-тонік з червоним апельсином рятує в будь-яку спеку. Ідеальний баланс кислотності кави та гірчинки тоніка.»</p>
+            <div class="review-author">
+              <div>
+                <strong>Ірина Бондаренко</strong>
+                <small>Кавоманка</small>
+              </div>
+              <span>★★★★★</span>
+            </div>
+          </div>
+
+        </div>
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- КОНСТРУКТОР НАПОЮ -->
+  <section class="constructor">
+    <div class="wrap">
+      <div class="cta-box">
+        <div class="glow a"></div>
+        <div class="glow b"></div>
+
+        <div>
+          <div class="eyebrow">✦ Твій індивідуальний рецепт</div>
+
+          <h2>
+            Збери свій ідеальний напій у цифровому конструкторі
+          </h2>
+
+          <p>
+            Обирай базу з 12 моносортів, рослинне або органічне
+            фермерське молоко, температуру, об'єм та авторські спеції.
+            Бариста приготує напій чітко за твоїми параметрами.
+          </p>
+
+          <div class="feat">
+            <span>● Зерно на вибір</span>
+            <span>● Вибір екстракції</span>
+            <span>● Кастомні добавки</span>
+          </div>
+        </div>
+
+        <a href="constructor.html" class="btn btn-primary">
+          Перейти до конструктора →
+        </a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="f-grid">
+
+      <div>
+        <div class="brand">КаваLab</div>
+        <p>
+          Лабораторія спешелті кави. Обсмажуємо виключно свіжі
+          мікролоти, досліджуємо профілі екстракції та створюємо
+          безкомпромісний сенсорний досвід.
+        </p>
+        <div class="socials">
+          <a href="#">IG</a>
+          <a href="#">FB</a>
+          <a href="#">TG</a>
+        </div>
+      </div>
+
+      <div>
+        <h4>Локація та Графік</h4>
+        <ul>
+          <li>📍 Київ, вул. Рейтарська, 15б</li>
+          <li>🕗 Пн–Пт: 08:00 – 21:00<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Сб–Нд: 09:00 – 22:00</li>
+          <li>📞 <a href="tel:+380443456789">+380 (44) 345-67-89</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4>Навігація</h4>
+        <ul>
+          <li><a href="menu.html">Кавова карта</a></li>
+          <li><a href="constructor.html">Конструктор власного напою</a></li>
+          <li><a href="#">Зерно в пачках (Microlots)</a></li>
+          <li><a href="#">Майстер-класи та каппінги</a></li>
+          <li><a href="about.html">Контакти та співпраця</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4>Клуб КаваLab</h4>
+        <p>
+          Отримуйте сповіщення про лімітовані релізи зерен,
+          сезонні рецепти та закриті каппінги.
+        </p>
+        <form class="sub" onsubmit="return false">
+          <input type="email" placeholder="Ваш e-mail" aria-label="E-mail">
+          <button type="submit">Підписатися →</button>
+        </form>
+      </div>
+
+    </div>
+
+    <div class="legal">
+      <span>
+        © 2025 КаваLab Roasters. Усі права захищено.
+        Спешелті кава з повагою до терруару.
+      </span>
+      <div>
+        <a href="#">Політика конфіденційності</a>
+        <a href="#">Публічна оферта</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

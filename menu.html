@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Меню — КаваLab</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,700&family=Plus+Jakarta+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<script>try{document.documentElement.setAttribute('data-theme',JSON.parse(localStorage.getItem('kl_theme')||'"dark"'))}catch(e){}</script>
+</head>
+<body>
+<header class="header"><div class="wrap">
+  <div class="left">
+    <a href="index.html" class="logo"><img src="images/logo.svg" alt="КаваLab" class="logo-mark"><span><b>КаваLab</b><small>Specialty Roasters</small></span></a>
+    <nav><a href="index.html">Головна</a><a href="menu.html" class="active">Меню</a><a href="constructor.html">Конструктор напою</a><a href="recipes.html">Рецепти</a><a href="about.html">Про нас і контакти</a></nav>
+  </div>
+  <div class="right">
+    <button class="theme" id="theme" type="button"><i></i>Тема: Espresso Shot 🌙</button>
+    <button class="icon-btn" id="theme-m" type="button" aria-label="Тема">🌙</button>
+    <button class="icon-btn" id="burger" type="button" aria-label="Меню">☰</button>
+  </div>
+</div></header>
+<aside class="drawer" id="drawer">
+  <div class="top"><a href="index.html" class="logo"><img src="images/logo.svg" alt="КаваLab" class="logo-mark"><b style="font:600 22px var(--serif)">КаваLab</b></a><button class="icon-btn" id="close" type="button" aria-label="Закрити">✕</button></div>
+  <a href="index.html">Головна</a><a href="menu.html" class="active">Меню</a><a href="constructor.html">Конструктор напою</a><a href="recipes.html">Рецепти</a><a href="about.html">Про нас і контакти</a>
+  <small><b style="display:block;color:var(--text)">Лабораторія кави</b>Київ, вул. Рейтарська, 15б</small>
+</aside>
+<nav class="tabbar"><a href="index.html"><span>🏠</span>Головна</a><a href="menu.html" class="active"><span>☕</span>Меню</a><a href="constructor.html"><span>⚗</span>Конструктор</a><a href="recipes.html"><span>📖</span>Рецепти</a><a href="about.html"><span>ℹ</span>Про нас</a></nav>
+<main>
+
+<section class="page-head"><div class="wrap">
+  <div class="row"><div><span class="pill">Спешелті бар / Сезонний реліз 2025</span>
+  <h1>Карта напоїв та авторських смаків</h1><p>Обирайте свіжий спешелті-брю, класику на свіжому молоці або налаштуйте будь-який напій під себе.</p></div>
+  <div class="stat-box"><b>La Marzocco KB90 • 9.2 Bar</b>Калібрування жорен</div></div>
+  <label class="search">🔍<input id="q" type="search" placeholder="Знайти напій, інгредієнт або смакові ноти…"></label>
+  <div class="filters"><button type="button" data-cat="all" class="on">Усі позиції (12)</button><button type="button" data-cat="espresso">Класичний еспресо-бар</button><button type="button" data-cat="milk">Молочна класика</button><button type="button" data-cat="author">Авторські напої</button><button type="button" data-cat="cold">Холодна кава</button><button type="button" data-cat="matcha">Матча та чай</button></div>
+</div></section>
+
+<section class="wrap">
+  <div class="count"><span id="shown">Показано 12 позицій меню</span><span>100% арабіка specialty Q-grade 86+</span></div>
+  <div class="menu-grid" id="menu-grid">
+
+    <article class="dish" data-cat="espresso">
+      <div class="photo" style="background-image:url('images/coffee-1.png'),linear-gradient(135deg,#5f4025,#2a1d12)"><span>Single Origin</span></div>
+      <div class="k"><span>SINGLE ORIGIN MICROLOT</span><b>30 мл</b></div>
+      <h3>Еспресо Single Origin</h3>
+      <p>Ефіопія Їргачеф, мита обробка. Чиста іскриста чашка з шовковистим післясмаком та яскравим квітковим букетом.</p>
+      <div class="chips"><span>Жасмин</span><span>Бергамот</span><span>Персик</span></div>
+      <div class="foot"><div><small>Вартість</small><b>65 ₴</b></div><a class="btn" href="constructor.html">⚙ Змінити в конструкторі</a></div>
+    </article>
+
+    <article class="dish" data-cat="espresso">
+      <div class="photo" style="background-image:url('images/coffee-2.png'),linear-gradient(135deg,#5f4025,#2a1d12)"><span>Double Shot</span></div>
+      <div class="k"><span>ПОДВІЙНА ЕКСТРАКЦІЯ</span><b>60 мл</b></div>
+      <h3>Допіо</h3>
+      <p>Подвійний шот щільного концентрату з благородною густою кремою на суміші сортів Колумбія Huila та Бразилія Cerrado.</p>
+      <div class="chips"><span>Темний шоколад</span><span>Карамель</span></div>
+      <div class="foot"><div><small>Вартість</small><b>80 ₴</b></div><a class="btn" href="constructor.html">⚙ Змінити в конструкторі</a></div>
+    </article>
+
+    <article class="dish" data-cat="espresso">
+      <div class="photo" style="background-image:url('images/coffee-3.png'),linear-gradient(135deg,#5f4025,#2a1d12)"><span>Filter Vibe</span></div>
+      <div class="k"><span>МʼЯКИЙ ПРОФІЛЬ</span><b>180 мл</b></div>
+      <h3>Американо</h3>
+      <p>Чистий збалансований смак. Готується шляхом делікатного додавання гарячої води мінералізації 90 ppm до свіжого еспресо.</p>
+      <div class="chips"><span>Тростинний цукор</span><span>Червоні ягоди</span></div>
+      <div class="foot"><div><small>Вартість</small><b>75 ₴</b></div><a class="btn" href="constructor.html">⚙ Змінити в конструкторі</a></div>
+    </article>
+
+    <article class="dish" data-cat="milk">
+      <div class="photo" style="background-image:url('images/coffee-4.png'),linear-gradient(135deg,#5f4025,#2a1d12)"><span>Classic</span></div>
+      <div class="k"><span>МʼЯКА ГАРМОНІЯ</span><b>220 мл</b></div>
+      <h3>Американо з молоком</h3>
+      <p>Класичний американо з додаванням фермерського незбираного молока або безлактозної чи рослинної альтернативи на вибір.</p>
+      <div class="chips"><span>Вибір молока</span><span>Какао</span><span>Вершки</span></div>
+      <div class="foot"><div><small>Вартість</small><b>85 ₴</b></div><a class="btn" href="constructor.html">⚙ Змінити в конструкторі</a></div>
+    </article>
+
+    <article class="dish" data-cat="milk">
+      <div class="photo" style="background-image:url('images/coffee-5.png'),linear-gradient(135deg,#5f4025,#2a1d12)"><span>Бестселер</span></div>
+      <div class="k"><span>ЕТАЛОННИЙ БАЛАНС</span><b>220 мл</b></div>
+      <h3>Капучино класичний</h3>
+      <p>Шовковиста пінка мікротекстури, збита при температурі 62°C. Ідеальна синергія солодкого молока та подвійного еспресо.</p>
+      <div class="chips"><span>Фундук</span><span>Пісочне печиво</span></div>
+      <div class="foot"><div><small>Вартість</small><b>90 ₴</b></div><a class="btn" href="constructor.html">⚙ Змінити в конструкторі</a></div>
+    </article>
+
+    <article class="dish" data-cat="milk">
+      <div class="photo" style="background-image:url('images/coffee-6.png'),linear-gradient(135deg,#5f4025,#2a1d12)"><span>Velvet Milk</span></div>
+      <div class="k"><span>МʼЯКИЙ ОБВОЛІКАЮЧИЙ</span><b>320 мл</b></div>
+      <h3>Лате Шовковистий</h3>
+      <p>Ніжна кремова текстура з легким відтінком еспресо. Більше пропареного солодкого молока для повільного ранку.</p>
+      <div class="chips"><span>Ваніль</span><span>Молочна пінка</span></div>
+      <div class="foot"><div><small>Вартість</small><b>95 ₴</b></div><a class="btn" href="constructor.html">⚙ Змінити в конструкторі</a></div>
+    </article>
+
+    <article class="dish" data-cat="milk">
+      <div class="photo" style="background-image:url('images/coffee-7.png'),linear-gradient(135deg,#5f4025,#2a1d12)"><span>Double Ristretto</span></div>
+      <div class="k"><span>ІНТЕНСИВНА МОЛОЧНА ЧАШКА</span><b>180 мл</b></div>
+      <h3>Флет Вайт</h3>
+      <p>Подвійний шот допіо та тонкий глянцевий шар шовкового молока. Виразний, концентрований кавовий профіль.</p>
+      <div class="chips"><span>Мигдаль</span><span>Какао боби</span></div>
+      <div class="foot"><div><small>Вартість</small><b>100 ₴</b></div><a class="btn" href="constructor.html">⚙ Змінити в конструкторі</a></div>
+    </article>
+
+    <article class="dish" data-cat="author">
+      <div class="photo" style="background-image:url('images/coffee-8.png'),linear-gradient(135deg,#5f4025,#2a1d12)"><span>Авторський</span></div>
+      <div class="k"><span>ДЕСЕРТНА ТЕКСТУРА</span><b>250 мл</b></div>
+      <h3>Раф класичний</h3>
+      <p>Легкі вершки 10%, збиті разом безпосередньо з еспресо та натуральним ванільним цукром бурбон у повітряну мусову текстуру.</p>
+      <div class="chips"><span>Мадагаскарська ваніль</span><span>Пломбір</span></div>
+      <div class="foot"><div><small>Вартість</small><b>115 ₴</b></div><a class="btn" href="constructor.html">⚙ Змінити в конструкторі</a></div>
+    </article>
+
+    <article class="dish" data-cat="author">
+      <div class="photo" style="background-image:url('images/coffee-9.png'),linear-gradient(135deg,#5f4025,#2a1d12)"><span>Fleur de Sel</span></div>
+      <div class="k"><span>ФІРМОВИЙ РЕЦЕПТ</span><b>320 мл</b></div>
+      <h3>Солона карамель лате</h3>
+      <p>Домашня вершкова карамель власного приготування з кристалами солі Fleur de Sel, збагачена подвійним шотом еспресо.</p>
+      <div class="chips"><span>Fleur de Sel</span><span>Вершковий ірис</span></div>
+      <div class="foot"><div><small>Вартість</small><b>120 ₴</b></div><a class="btn" href="constructor.html">⚙ Змінити в конструкторі</a></div>
+    </article>
+
+    <article class="dish" data-cat="cold">
+      <div class="photo" style="background-image:url('images/coffee-10.png'),linear-gradient(135deg,#5f4025,#2a1d12)"><span>Iced Craft</span></div>
+      <div class="k"><span>COLD BREW & MILK</span><b>350 мл</b></div>
+      <h3>Айс-лате з льодом</h3>
+      <p>Освіжаючий напій з кубиками монолітного льоду, охолодженим молоком та шотом еспресо, що плавно переливається градієнтом.</p>
+      <div class="chips"><span>Холодна пінка</span><span>Освіжаючий</span></div>
+      <div class="foot"><div><small>Вартість</small><b>110 ₴</b></div><a class="btn" href="constructor.html">⚙ Змінити в конструкторі</a></div>
+    </article>
+
+    <article class="dish" data-cat="cold">
+      <div class="photo" style="background-image:url('images/coffee-11.png'),linear-gradient(135deg,#5f4025,#2a1d12)"><span>Сезонний хіт</span></div>
+      <div class="k"><span>ФІРМОВИЙ ТОНІК</span><b>300 мл</b></div>
+      <h3>Еспресо-тонік з розмарином</h3>
+      <p>Грайливі бульбашки ботанічного тоніка, делікатний цитрусовий відтінок сушеного апельсина, гілочка розмарину та шот Кенія Nyeri.</p>
+      <div class="chips"><span>Червоний грейпфрут</span><span>Хвоя</span><span>Хінін</span></div>
+      <div class="foot"><div><small>Вартість</small><b>125 ₴</b></div><a class="btn" href="constructor.html">⚙ Змінити в конструкторі</a></div>
+    </article>
+
+    <article class="dish" data-cat="matcha">
+      <div class="photo" style="background-image:url('images/coffee-12.png'),linear-gradient(135deg,#5f4025,#2a1d12)"><span>Uji Kyoto</span></div>
+      <div class="k"><span>ЯПОНСЬКИЙ ЧАЙНИЙ САД</span><b>280 мл</b></div>
+      <h3>Матча-латте церемоніальна Uji</h3>
+      <p>Автентична перша весняна матча першого збору з префектури Кіото, приготована вінчиком часен з кокосовим або вівсяним молоком.</p>
+      <div class="chips"><span>Умамі</span><span>Молодий шпинат</span><span>Фісташка</span></div>
+      <div class="foot"><div><small>Вартість</small><b>130 ₴</b></div><a class="btn" href="constructor.html">⚙ Змінити в конструкторі</a></div>
+    </article>
+
+  </div>
+</section>
+
+<section class="lab"><div class="wrap"><div class="lab-box">
+  <div><span class="pill">⚗ Лабораторний конструктор напоїв</span>
+  <h2>Хочете налаштувати об'єм, рівень солодкості чи тип молока під свій смак?</h2>
+  <p class="muted">Виберіть сорт зерна свіжого обсмажування, додайте подвійний шот, веганське молоко (вівсяне, мигдальне, кокосове) або натуральний сироп нашого приготування без цукру.</p>
+  <div class="links"><a class="btn btn-primary" href="constructor.html">Відкрити конструктор ✦</a><a class="more" href="about.html">Запитати баристу</a></div></div>
+  <div class="bars"><div class="t"><b>Базові параметри екстракції</b><span>TDS 9.4%</span></div>
+   <div class="r"><div><span>Кислинка (Acidity)</span><span>8 / 10</span></div><i style="width:80%"></i></div>
+   <div class="r"><div><span>Тіло напою (Body)</span><span>6.5 / 10</span></div><i style="width:65%"></i></div>
+   <div class="r"><div><span>Природна солодкість</span><span>9 / 10</span></div><i style="width:90%"></i></div>
+   <div style="color:#96d3b7">✓ Контроль кожної чашки за допомогою рефрактометра</div></div>
+</div></div></section></main>
+<footer><div class="wrap">
+  <div class="f-grid">
+    <div><div class="brand">КаваLab</div><p>Лабораторія спешелті кави. Обсмажуємо виключно свіжі мікролоти, досліджуємо профілі екстракції та створюємо безкомпромісний сенсорний досвід.</p><div class="socials"><a href="#">IG</a><a href="#">FB</a><a href="#">TG</a></div></div>
+    <div><h4>Локація та Графік</h4><ul><li>📍 Київ, вул. Рейтарська, 15б</li><li>🕗 Пн–Пт: 08:00 – 21:00<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Сб–Нд: 09:00 – 22:00</li><li>📞 <a href="tel:+380443456789">+380 (44) 345-67-89</a></li></ul></div>
+    <div><h4>Навігація</h4><ul><li><a href="menu.html">Кавова карта</a></li><li><a href="constructor.html">Конструктор власного напою</a></li><li><a href="#">Зерно в пачках (Microlots)</a></li><li><a href="#">Майстер-класи та каппінги</a></li><li><a href="about.html">Контакти та співпраця</a></li></ul></div>
+    <div><h4>Клуб КаваLab</h4><p>Отримуйте сповіщення про лімітовані релізи зерен, сезонні рецепти та закриті каппінги.</p><form class="sub" onsubmit="return false"><input type="email" placeholder="Ваш e-mail" aria-label="E-mail"><button type="submit">Підписатися →</button></form></div>
+  </div>
+  <div class="legal"><span>© 2025 КаваLab Roasters. Усі права захищено. Спешелті кава з повагою до терруару.</span><div><a href="#">Політика конфіденційності</a><a href="#">Публічна оферта</a></div></div>
+</div></footer>
+<script src="script.js"></script>
+</body>
+</html>

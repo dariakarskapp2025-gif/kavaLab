@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Про нас і контакти — КаваLab</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,700&family=Plus+Jakarta+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<script>try{document.documentElement.setAttribute('data-theme',JSON.parse(localStorage.getItem('kl_theme')||'"dark"'))}catch(e){}</script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
+</head>
+
+<body>
+<header class="header"><div class="wrap">
+  <div class="left">
+    <a href="index.html" class="logo"><img src="images/logo.svg" alt="КаваLab" class="logo-mark"><span><b>КаваLab</b><small>Specialty Roasters</small></span></a>
+    <nav><a href="index.html">Головна</a><a href="menu.html">Меню</a><a href="constructor.html">Конструктор напою</a><a href="recipes.html">Рецепти</a><a href="about.html" class="active">Про нас і контакти</a></nav>
+  </div>
+  <div class="right">
+    <button class="theme" id="theme" type="button"><i></i>Тема: Espresso Shot 🌙</button>
+    <button class="icon-btn" id="theme-m" type="button" aria-label="Тема">🌙</button>
+    <button class="icon-btn" id="burger" type="button" aria-label="Меню">☰</button>
+  </div>
+</div></header>
+<aside class="drawer" id="drawer">
+  <div class="top"><a href="index.html" class="logo"><img src="images/logo.svg" alt="КаваLab" class="logo-mark"><b style="font:600 22px var(--serif)">КаваLab</b></a><button class="icon-btn" id="close" type="button" aria-label="Закрити">✕</button></div>
+  <a href="index.html">Головна</a><a href="menu.html">Меню</a><a href="constructor.html">Конструктор напою</a><a href="recipes.html">Рецепти</a><a href="about.html" class="active">Про нас і контакти</a>
+  <small><b style="display:block;color:var(--text)">Лабораторія кави</b>Київ, вул. Рейтарська, 15б</small>
+</aside>
+<nav class="tabbar"><a href="index.html"><span>🏠</span>Головна</a><a href="menu.html"><span>☕</span>Меню</a><a href="constructor.html"><span>⚗</span>Конструктор</a><a href="recipes.html"><span>📖</span>Рецепти</a><a href="about.html" class="active"><span>ℹ</span>Про нас</a></nav>
+<main>
+
+<section class="wrap about-hero">
+  <div>
+    <h1>Про нас — <em>Наука обсмажування</em> та магія затишку</h1>
+    <p class="big">Київська незалежна ростерія <b>КаваLab</b> народилася на стику прецизійної термодинаміки та безумовної любові до повільних ранкових ритуалів. Ми переконані: чашка досконалої кави — це не випадок, а чітко калібрована формула тепла, часу та відданості фермерів.</p>
+    <p>Працюємо на голландській ростерії Giesen W15A, вибудовуючи неповторні криві RoR для кожної мікропартії. Ми особисто співпрацюємо за моделлю Direct Trade із фермами в регіонах Yirgacheffe (Ефіопія) та Huila (Колумбія), гарантуючи справедливу ціну виробникам та бездоганний показник SCA 87+.</p>
+    <div class="stats"><div class="metric"><b>87+</b><span>SCA рейтинг зерна</span></div><div class="metric"><b>100%</b><span>Direct Trade імпорт</span></div><div class="metric"><b>540+</b><span>Проведених каппінгів</span></div></div>
+  </div>
+  <div class="photo"><div><b>Каппінг-сесія щосуботи</b>11:00 • 6 мікролотів із сертифікованим Q-грейдером</div></div>
+</section>
+<section class="wrap values">
+  <div class="value"><span>🏷</span><h3>Етичний імпорт зерна</h3><p>Жодних біржових посередників. Прямі контракти з фермерами Оромії та Уїли з премією до 40% понад ринок для підтримки локальних громад.</p><small>DIRECT ORIGIN ●</small></div>
+  <div class="value"><span>🌡</span><h3>Авторські профілі</h3><p>Цифровий моніторинг кожної секунди обсмажування в системі Cropster. Балансуємо яскраву терруарну ензиму кислотність і шовковисту солодкість карамелі.</p><small>GIESEN W15 PRECISION ●</small></div>
+  <div class="value"><span>🏺</span><h3>Кераміка ручної роботи</h3><p>Кожна філіжанка створена опішнянськими гончарями спеціально для нашого бару. Масивні стінки утримують оптимальну температуру дегустації напою.</p><small>ARTISANAL CLAY ●</small></div>
+  <div class="value"><span>👥</span><h3>Ком'юніті кавоманів</h3><p>Відкритий простір без снобізму. Проводимо лекції про ферментацію, калібруємо домашні кавомолки та допомагаємо знайти улюблений смаковий дескриптор.</p><small>WEEKLY CUPPINGS ●</small></div>
+</section>
+<section class="where"><div class="wrap">
+  <span class="eyebrow" style="color:var(--green-light)">Серце старого Києва</span><h2>Локація та Атмосфера простору</h2>
+  <div class="where-grid">
+    <div class="addr"><h3>Рейтарська, 15б</h3><p>Затишний дворик з магнолією та старим каштаном</p>
+      <p>Зайдіть у кувану арку поруч із галереєю, пройдіть повз старий київський каштан — на вас чекає теплий теракотовий ганок, запах свіжого помелу та джазовий вініл на фоні.</p>
+      <div><b>🕗 Графік роботи кав'ярні:</b><br><span class="muted">Понеділок – П'ятниця: <b>08:00 – 21:00</b><br>Субота – Неділя: <b>09:00 – 22:00</b></span></div>
+      <div><b>📞 Прямий телефон ростерії:</b><br><a class="muted" href="tel:+380443456789">+380 (44) 345-67-89</a></div>
+      <div><b>✉ Електронна пошта:</b><br><a class="muted" href="mailto:hello@kavalab.kyiv.ua">hello@kavalab.kyiv.ua</a></div>
+      <div class="live">● Зараз відкрито • Капучино на гостьовому зерні</div></div>
+    <div class="map"><span style="left:18px;top:18px">● КаваLab Specialty Hub &nbsp; Золоті Ворота (4 хв)</span><span style="right:18px;bottom:18px">Магнолієвий сад • Вхід крізь лівий арку</span></div>
+  </div></div></section>
+<section class="book"><div class="wrap">
+  <div class="center"><span class="pill">📅 Бронювання та дегустації</span><h2 style="margin-top:14px">Забронювати стіл або участь у каппінгу</h2><p class="muted">Оберіть зручний час для спокійної бесіди біля каміна чи запишіться на щотижневе відкрите калібрування сенсорних навичок.</p></div>
+  <form class="form" id="booking">
+    <div><b style="font-size:13px">Оберіть формат візиту:</b>
+    <div class="seg" style="margin-top:10px"><label class="opt"><input type="radio" name="fmt" checked><div><b>Затишна кава</b><small>Столик біля вікна, авторські напої з десертами, неквапливий відпочинок.</small></div></label>
+    <label class="opt"><input type="radio" name="fmt"><div><b>Суботній каппінг</b><small>Сліпа сенсорна дегустація 6 мікролотів свіжого врожаю. Початок об 11:00.</small></div></label></div></div>
+    <div class="row2"><label class="f">Ваше ім'я<input type="text" placeholder="Олександр або Анна" required></label><label class="f">Номер телефону<input type="tel" placeholder="+380 (__) ___-__-__" required></label></div>
+    <div class="row3"><label class="f">Дата<input type="date" required></label><label class="f">Бажаний час<input type="time" value="11:00"></label>
+      <div class="f" style="display:grid;gap:8px;font-size:13px;font-weight:600">Кількість гостей<div class="seg"><label class="opt"><input type="radio" name="g" checked><div><b>1–2</b></div></label><label class="opt"><input type="radio" name="g"><div><b>3–4</b></div></label><label class="opt"><input type="radio" name="g"><div><b>5+</b></div></label></div></div></div>
+    <label class="f">Особливі побажання або рівень кавового досвіду<textarea placeholder="Наприклад: цікавить дегустація анаеробних зерен або потрібне тихе місце для читання…"></textarea></label>
+    <div class="foot"><span>🛡 Підтвердження надійде в Telegram або SMS упродовж 15 хв</span><button class="btn btn-primary" id="bk-btn" type="submit">Підтвердити бронювання ✓</button></div>
+  </form></div></section></main>
+<footer><div class="wrap">
+  <div class="f-grid">
+    <div><div class="brand">КаваLab</div><p>Лабораторія спешелті кави. Обсмажуємо виключно свіжі мікролоти, досліджуємо профілі екстракції та створюємо безкомпромісний сенсорний досвід.</p><div class="socials"><a href="#">IG</a><a href="#">FB</a><a href="#">TG</a></div></div>
+    <div><h4>Локація та Графік</h4><ul><li>📍 Київ, вул. Рейтарська, 15б</li><li>🕗 Пн–Пт: 08:00 – 21:00<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Сб–Нд: 09:00 – 22:00</li><li>📞 <a href="tel:+380443456789">+380 (44) 345-67-89</a></li></ul></div>
+    <div><h4>Навігація</h4><ul><li><a href="menu.html">Кавова карта</a></li><li><a href="constructor.html">Конструктор власного напою</a></li><li><a href="#">Зерно в пачках (Microlots)</a></li><li><a href="#">Майстер-класи та каппінги</a></li><li><a href="about.html">Контакти та співпраця</a></li></ul></div>
+    <div><h4>Клуб КаваLab</h4><p>Отримуйте сповіщення про лімітовані релізи зерен, сезонні рецепти та закриті каппінги.</p><form class="sub" onsubmit="return false"><input type="email" placeholder="Ваш e-mail" aria-label="E-mail"><button type="submit">Підписатися →</button></form></div>
+  </div>
+  <div class="legal"><span>© 2025 КаваLab Roasters. Усі права захищено. Спешелті кава з повагою до терруару.</span><div><a href="#">Політика конфіденційності</a><a href="#">Публічна оферта</a></div></div>
+</div></footer>
+<script src="script.js"></script>
+</body>
+</html>

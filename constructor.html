@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Конструктор напою — КаваLab</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,700&family=Plus+Jakarta+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<script>try{document.documentElement.setAttribute('data-theme',JSON.parse(localStorage.getItem('kl_theme')||'"dark"'))}catch(e){}</script>
+</head>
+<body>
+<header class="header"><div class="wrap">
+  <div class="left">
+    <a href="index.html" class="logo"><img src="images/logo.svg" alt="КаваLab" class="logo-mark"><span><b>КаваLab</b><small>Specialty Roasters</small></span></a>
+    <nav><a href="index.html">Головна</a><a href="menu.html">Меню</a><a href="constructor.html" class="active">Конструктор напою</a><a href="recipes.html">Рецепти</a><a href="about.html">Про нас і контакти</a></nav>
+  </div>
+  <div class="right">
+    <button class="theme" id="theme" type="button"><i></i>Тема: Espresso Shot 🌙</button>
+    <button class="icon-btn" id="theme-m" type="button" aria-label="Тема">🌙</button>
+    <button class="icon-btn" id="burger" type="button" aria-label="Меню">☰</button>
+  </div>
+</div></header>
+<aside class="drawer" id="drawer">
+  <div class="top"><a href="index.html" class="logo"><img src="images/logo.svg" alt="КаваLab" class="logo-mark"><b style="font:600 22px var(--serif)">КаваLab</b></a><button class="icon-btn" id="close" type="button" aria-label="Закрити">✕</button></div>
+  <a href="index.html">Головна</a><a href="menu.html">Меню</a><a href="constructor.html" class="active">Конструктор напою</a><a href="recipes.html">Рецепти</a><a href="about.html">Про нас і контакти</a>
+  <small><b style="display:block;color:var(--text)">Лабораторія кави</b>Київ, вул. Рейтарська, 15б</small>
+</aside>
+<nav class="tabbar"><a href="index.html"><span>🏠</span>Головна</a><a href="menu.html"><span>☕</span>Меню</a><a href="constructor.html" class="active"><span>⚗</span>Конструктор</a><a href="recipes.html"><span>📖</span>Рецепти</a><a href="about.html"><span>ℹ</span>Про нас</a></nav>
+<main>
+
+<section class="page-head"><div class="wrap"><div class="row">
+  <div><span class="pill">● Лабораторія смаку • Custom roast flow</span><h1>Конструктор авторського напою</h1><p>Обирай інгредієнти крок за кроком та спостерігай за збіркою свого стаканчика у реальному часі.</p></div>
+  <div class="stat-box"><small>Калібрування води</small><b>93.5°C • 120 ppm TDS</b></div></div></div></section>
+<form class="wrap build" id="builder" onsubmit="return false">
+  <div>
+    <section class="step"><header><h2><i>01</i>Розмір стаканчика</h2><span>Обʼєм порції</span></header><div class="opts sizes"><label class="opt"><input type="radio" name="size" data-p="0" data-t="S"><div><b>S</b><small>250 мл</small><em>Базовий</em></div></label><label class="opt"><input type="radio" name="size" data-p="25" data-t="M" checked><div><b>M</b><small>350 мл</small><em>+25 ₴</em></div></label><label class="opt"><input type="radio" name="size" data-p="40" data-t="L"><div><b>L</b><small>450 мл</small><em>+40 ₴</em></div></label></div></section>
+    <section class="step"><header><h2><i>02</i>Кавова основа</h2><span>Екстракція</span></header><div class="opts "><label class="opt"><input type="radio" name="base" data-p="65" data-t="Еспресо"><div><b>Еспресо</b><small>30 мл • Solo</small><em>65 ₴</em></div></label><label class="opt"><input type="radio" name="base" data-p="75" data-t="Американо"><div><b>Американо</b><small>150 мл • Mild</small><em>75 ₴</em></div></label><label class="opt"><input type="radio" name="base" data-p="90" data-t="Капучино"><div><b>Капучино</b><small>Густа пінка</small><em>90 ₴</em></div></label><label class="opt"><input type="radio" name="base" data-p="95" data-t="Лате" checked><div><b>Лате</b><small>Оксамитове & мʼяке</small><em>95 ₴</em></div></label><label class="opt"><input type="radio" name="base" data-p="105" data-t="Флет Вайт"><div><b>Флет Вайт</b><small>Подвійний шот</small><em>105 ₴</em></div></label><label class="opt"><input type="radio" name="base" data-p="115" data-t="Матча Uji"><div><b>Матча Uji</b><small>Церемоніальна</small><em>115 ₴</em></div></label></div></section>
+    <section class="step"><header><h2><i>03</i>Вид молока</h2><span>Текстура &amp; рослинні бази</span></header><div class="opts two"><label class="opt"><input type="radio" name="milk" data-p="0" data-t="Фермерське незбіране"><div><b>Фермерське незбіране</b><small>3.2% жирності, кремовий профіль</small><em>Включено</em></div></label><label class="opt"><input type="radio" name="milk" data-p="15" data-t="Безлактозне"><div><b>Безлактозне</b><small>Легке, злегка солодкувате</small><em>+15 ₴</em></div></label><label class="opt"><input type="radio" name="milk" data-p="20" data-t="Вівсяне Barista" checked><div><b>Вівсяне Barista</b><small>Шовковиста мікропінка • Oatly Spec</small><em>+20 ₴</em></div></label><label class="opt"><input type="radio" name="milk" data-p="25" data-t="Мигдалеве"><div><b>Мигдалеве</b><small>Тонкі марципанові ноти</small><em>+25 ₴</em></div></label><label class="opt wide"><input type="radio" name="milk" data-p="25" data-t="Кокосове органічне"><div><b>Кокосове органічне</b><small>Екзотичний солодкий шлейф</small><em>+25 ₴</em></div></label></div></section>
+    <section class="step"><header><h2><i>04</i>Крафтовий сироп власного виробництва</h2><span>Зварено в лабораторії</span></header><div class="opts two"><label class="opt"><input type="radio" name="syrup" data-p="0" data-t="Без сиропу"><div><b>Без сиропу</b><small>Чистий смаковий баланс зерен</small></div></label><label class="opt"><input type="radio" name="syrup" data-p="20" data-t="Солона карамель Fleur de Sel" checked><div><b>Солона карамель Fleur de Sel</b><small>Морська сіль з Бретані & тростинний цукор</small><em>+20 ₴</em></div></label><label class="opt"><input type="radio" name="syrup" data-p="20" data-t="Бурбонська Ваніль"><div><b>Бурбонська Ваніль</b><small>Стручки мадагаскарської ванілі</small><em>+20 ₴</em></div></label><label class="opt"><input type="radio" name="syrup" data-p="20" data-t="Лісовий горіх (Праліне)"><div><b>Лісовий горіх (Праліне)</b><small>Смажений фундук з легкою гірчинкою</small><em>+20 ₴</em></div></label><label class="opt wide"><input type="radio" name="syrup" data-p="25" data-t="Гірська Лаванда"><div><b>Гірська Лаванда</b><small>Ефірні олії суцвіть, тонкий квітковий шлейф</small><em>+25 ₴</em></div></label></div></section>
+    <section class="step"><header><h2><i>05</i>Топінги та фінальні акценти</h2><span>Мультиселекція</span></header><div class="opts two"><label class="opt"><input type="checkbox" name="top" data-p="25" data-t="Додатковий шот еспресо"><div><b>Додатковий шот еспресо</b><small>+30 мл інтенсивності</small><em>+25 ₴</em></div></label><label class="opt"><input type="checkbox" name="top" data-p="15" data-t="Міні-маршмелоу" checked><div><b>Міні-маршмелоу</b><small>Ніжні кубики на піні</small><em>+15 ₴</em></div></label><label class="opt"><input type="checkbox" name="top" data-p="10" data-t="Кориця та мускатний горіх" checked><div><b>Кориця та мускатний горіх</b><small>Свіжий млин прямо в чашку</small><em>+10 ₴</em></div></label><label class="opt"><input type="checkbox" name="top" data-p="20" data-t="Збиті натуральні вершки"><div><b>Збиті натуральні вершки</b><small>Густа оксамитова шапка</small><em>+20 ₴</em></div></label></div></section>
+  </div>
+  <aside class="preview">
+    <div class="hd"><span>● Живий рендер шарів</span><span id="psize">Розмір: M</span></div>
+    <div class="cup"><div class="l1" id="l1">—</div><div class="l2" id="l2">—</div><div class="l3" id="l3">—</div></div>
+    <h3 id="pname">Мій Лате (M)</h3>
+    <div class="sum" id="sum"></div>
+    <button class="btn btn-ghost" id="savebtn" type="button" style="margin-top:14px;width:100%">🔖 Зберегти рецепт у профіль</button>
+    <div class="note">100% арабіка свіжого обсмажування • Ефіопія Гуджі</div>
+  </aside>
+</form>
+<div class="wrap facts">
+  <div class="fact"><span>⏱</span><div><b>Час приготування</b><small>Від 3 до 5 хвилин. Бариста готує напій індивідуально для вас.</small></div></div>
+  <div class="fact"><span>☕</span><div><b>La Marzocco PB</b><small>Прецизійна стабільність тиску та температури екстракції до сотої частки градуса.</small></div></div>
+  <div class="fact"><span>♻</span><div><b>Zero-Waste стаканчик</b><small>Біорозкладне покриття з кукурудзяного крохмалю (PLA) без шкідливого пластику.</small></div></div>
+</div></main>
+<footer><div class="wrap">
+  <div class="f-grid">
+    <div><div class="brand">КаваLab</div><p>Лабораторія спешелті кави. Обсмажуємо виключно свіжі мікролоти, досліджуємо профілі екстракції та створюємо безкомпромісний сенсорний досвід.</p><div class="socials"><a href="#">IG</a><a href="#">FB</a><a href="#">TG</a></div></div>
+    <div><h4>Локація та Графік</h4><ul><li>📍 Київ, вул. Рейтарська, 15б</li><li>🕗 Пн–Пт: 08:00 – 21:00<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Сб–Нд: 09:00 – 22:00</li><li>📞 <a href="tel:+380443456789">+380 (44) 345-67-89</a></li></ul></div>
+    <div><h4>Навігація</h4><ul><li><a href="menu.html">Кавова карта</a></li><li><a href="constructor.html">Конструктор власного напою</a></li><li><a href="#">Зерно в пачках (Microlots)</a></li><li><a href="#">Майстер-класи та каппінги</a></li><li><a href="about.html">Контакти та співпраця</a></li></ul></div>
+    <div><h4>Клуб КаваLab</h4><p>Отримуйте сповіщення про лімітовані релізи зерен, сезонні рецепти та закриті каппінги.</p><form class="sub" onsubmit="return false"><input type="email" placeholder="Ваш e-mail" aria-label="E-mail"><button type="submit">Підписатися →</button></form></div>
+  </div>
+  <div class="legal"><span>© 2025 КаваLab Roasters. Усі права захищено. Спешелті кава з повагою до терруару.</span><div><a href="#">Політика конфіденційності</a><a href="#">Публічна оферта</a></div></div>
+</div></footer>
+<script src="script.js"></script>
+</body>
+</html>
