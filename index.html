@@ -8,15 +8,13 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,700&family=Plus+Jakarta+Sans:wght@400;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
 
-<!-- Swiper.js (карусель відгуків) -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+<!-- Swiper.js (карусель відгуків — без дубля та без блокування першого екрана) -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" media="print" onload="this.media='all'">
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
 
 <!-- Fancybox v5 (відкриття фото на весь екран) -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" media="print" onload="this.media='all'">
 <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js" defer></script>
 
 <!-- Typed.js (ефект живого друку) -->
@@ -97,7 +95,7 @@ try {
   <div class="wrap">
     <div class="left">
       <a href="index.html" class="logo">
-        <img src="images/logo.svg" alt="КаваLab" class="logo-mark">
+        <img src="images/logo.svg" alt="КаваLab" class="logo-mark" width="40" height="40">
         <span>
           <b>КаваLab</b>
           <small>Specialty Roasters</small>
@@ -126,7 +124,7 @@ try {
 <aside class="drawer" id="drawer">
   <div class="top">
     <a href="index.html" class="logo">
-      <img src="images/logo.svg" alt="КаваLab" class="logo-mark">
+      <img src="images/logo.svg" alt="КаваLab" class="logo-mark" width="40" height="40">
       <span>
         <b>КаваLab</b>
         <small>Specialty Roasters</small>
@@ -548,6 +546,6 @@ try {
   </div>
 </footer>
 
-<script src="script.js"></script>
+<script src="script.js" defer></script>
 </body>
 </html>
